@@ -32,7 +32,7 @@ public class StickCreater : MonoBehaviour
         {
             for (int x = 0; x < xCount; x++)
             {
-                int randomNum = Random.Range(0, 11) % 3;
+                int randomNum = Random.Range(0, 11) % 2;
                 Instantiate(prefabs[randomNum], startPos, Quaternion.identity, GameObject.Find("Stick Holder").transform);
                 startPos += xPosAdd;
             }

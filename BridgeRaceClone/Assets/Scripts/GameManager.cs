@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using  UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,9 +21,18 @@ public class GameManager : MonoBehaviour
                 }
         }
 
+        public void StartGame()
+        {
+                playerState = PlayerState.Playing;
+        }
+
+        public void RestartGame()
+        {
+                SceneManager.LoadScene(0);
+        }
+
         private void Start()
         {
-                //_playerState = PlayerState.Preparing;
-                playerState = PlayerState.Playing;
+                playerState = PlayerState.Preparing;
         }
 }

@@ -8,6 +8,9 @@ TagManager:
   - Yellow Stick
   - Red Stick
   - Collected Stick
+  - Ladder Stick
+  - Builded Stick
+  - Blue Player
   layers:
   - Default
   - TransparentFX
