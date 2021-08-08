@@ -65,6 +65,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+     <Compile Include="Assets\Scripts\AIControllerScript.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CollisionDetectorForFinish.cs" />
      <Compile Include="Assets\Scripts\CreateLadder.cs" />
@@ -648,6 +649,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{341E0FEF-F005-087A-F825-9DD6F823D670}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{EAB53CD3-473E-6C2E-1994-D754C5E09B60}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{766AF453-E5B5-9E65-0908-7020C88EF75D}</Project>
+      <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

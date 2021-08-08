@@ -69,29 +69,29 @@ namespace DefaultNamespace
                 animator.SetInteger(Number, 1);
             }
         }
-        void Collect(GameObject stick)
+        public void Collect(GameObject stick, Transform sb)
         {
             stick.transform.tag = "Collected Stick";
             Destroy(stick.gameObject.GetComponent<Rigidbody>());
-            if (stickBucket.childCount == 0)
+            if (sb.childCount == 0)
             {
-                stick.transform.SetParent(stickBucket);
+                stick.transform.SetParent(sb);
 
-                stick.transform.DOMove(stickBucket.position, .25f);
+                stick.transform.DOMove(sb.position, .25f);
             }
             else
             {
-                stick.transform.SetParent(stickBucket);
-                stick.transform.DOMove(stickBucket.position, .25f);
+                stick.transform.SetParent(sb);
+                stick.transform.DOMove(sb.position, .25f);
             }
         }
 
-        void UpStairs()
+        public void UpStairs()
         {
             RaycastHit hit;
             if (Physics.Raycast(raycastPos.position,raycastPos.forward,out hit,maxDistance))
             {
-                if (hit.transform.CompareTag("Builded Stick"))
+                if (hit.transform.CompareTag("Builded Stick Blue"))
                 {
                     transform.position += new Vector3(0, ladderJump, 0);
                 }
@@ -102,9 +102,9 @@ namespace DefaultNamespace
             }
         }
 
-        void BuildStairs(GameObject ladder)
+        public void BuildStairs(GameObject ladder,string tag, Transform sb)
         {
-            GameObject stick = stickBucket.GetChild(stickCount-1).gameObject;
+            GameObject stick = sb.GetChild(sb.childCount-1).gameObject;
             stick.transform.SetParent(null);
             Sequence seq = DOTween.Sequence();
             seq.Append(stick.transform.DOMove(ladder.transform.position, .25f))
@@ -115,8 +115,8 @@ namespace DefaultNamespace
             
             Destroy(stick,1f);
             ladder.GetComponent<MeshRenderer>().enabled = true;
-
-            ladder.transform.tag = "Builded Stick";
+            ladder.transform.tag = tag;
+            ladder.transform.SetParent(null);
 
         }
 
@@ -125,7 +125,7 @@ namespace DefaultNamespace
             // COLLECT
             if (other.CompareTag("Blue Stick"))
             {
-                Collect(other.gameObject);
+                Collect(other.gameObject,stickBucket);
                 //Destroy(other.gameObject);
                 StartCoroutine(StickCreater.instance.CreateStickAfterCollect(other.transform.position, 1));
             }
@@ -135,7 +135,7 @@ namespace DefaultNamespace
         {
             if (other.transform.CompareTag("Ladder Stick") && stickCount > 0)
             {
-                BuildStairs(other.gameObject);
+                BuildStairs(other.gameObject,"Builded Stick Blue",stickBucket);
             }
         }
     }

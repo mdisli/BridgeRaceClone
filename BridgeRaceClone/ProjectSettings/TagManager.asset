@@ -9,8 +9,11 @@ TagManager:
   - Red Stick
   - Collected Stick
   - Ladder Stick
-  - Builded Stick
   - Blue Player
+  - Builded Stick Blue
+  - Builded Stick Red
+  - Bridge
+  - Red AI
   layers:
   - Default
   - TransparentFX

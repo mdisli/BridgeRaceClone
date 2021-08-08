@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DefaultNamespace.AIControllerScript
     - DefaultNamespace.CameraController
     - DefaultNamespace.CollisionDetectorForFinish
     - DefaultNamespace.EditBuckets
@@ -11,6 +12,8 @@ ScriptsOnlyBuild:
     - StickCreater
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    NavMeshComponentsEditor.dll:
+    - UnityEditor.AI.NavMeshAssetManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -23,10 +26,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -82,56 +83,58 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11906}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 12072}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12480}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12516}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12568}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 12804}
     - Class: 114
-      Script: {instanceID: 13174}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 43676}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 97278}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 104536}
+      Script: {instanceID: 13168}
+    - Class: 114
+      Script: {instanceID: 13236}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 134
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -142,6 +145,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -180,6 +185,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 2b19be13f00df62e6d4d4f5539bcad51
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshModifier
+  - hash:
+      serializedVersion: 2
+      Hash: c8c672fee8a258266e51b55a210b8083
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshLink
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -344,6 +361,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DefaultNamespace
+    className: CollisionDetectorForFinish
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -356,10 +379,22 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 7299a528424874bcf6b5736b5305ac37
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
       Hash: ce669872a2be11bc686ea22961d8a3bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FloatingJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 0e9a1aa60cc6eb945a997c3d314bef7d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DefaultNamespace
+    className: AIControllerScript
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -372,6 +407,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6b5deb65e74ae7d8905122ea80e851db
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DefaultNamespace
+    className: UIManager
   - hash:
       serializedVersion: 2
       Hash: c78feff85e1e5e6ba662e30ae9e04244
@@ -494,6 +535,18 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 02e82fb8980ac763b85fa894b0ae63c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DefaultNamespace
+    className: CreateLadder
+  - hash:
+      serializedVersion: 2
+      Hash: 8d4458b476a9a4dd8df843a849fcfffa
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshSurface
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -516,6 +569,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: f1dd930546082059db6ae9941732a7c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DefaultNamespace
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -642,30 +701,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: DefaultNamespace
     className: EditBuckets
-  - hash:
-      serializedVersion: 2
-      Hash: 02e82fb8980ac763b85fa894b0ae63c1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DefaultNamespace
-    className: CreateLadder
-  - hash:
-      serializedVersion: 2
-      Hash: f1dd930546082059db6ae9941732a7c7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DefaultNamespace
-    className: CameraController
-  - hash:
-      serializedVersion: 2
-      Hash: 6b5deb65e74ae7d8905122ea80e851db
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DefaultNamespace
-    className: UIManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DefaultNamespace
-    className: CollisionDetectorForFinish
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
